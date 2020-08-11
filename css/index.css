@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/login-background3.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.signin {
+    width: 320px;
+    height: 420px;
+    background: #d61c6c;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px, 30px;
+    border-radius: 1rem;
+}
+
+.signin .logoLogin {
+    width: 320px;
+    position: absolute;
+    top: -70px;
+    border-radius: 1rem;
+    border: 2px solid #d61c6c;
+}
+
+.signin h1 {
+    margin: 0;
+    padding-top: 100px;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.signin form {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.signin label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.signin input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.signin input[type="text"],
+.signin input[type="password"] {
+    border:none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: rgb(127, 127, 127);
+}
+
+.signin input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 1rem;
+    font-size: 18px;
+    font-weight: bold;
+}
