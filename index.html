@@ -48,15 +48,21 @@
   <div class=signin>
     <img class="logoLogin" src=img/login.png alt="Logo e-Mercado">
       <h1>Inicia Sesión</h1>
-      <form action="cover.html">
+      <div class="userPass">
         <label for="Usuario">Usuario</label>
-        <input type="text" placeholder="Ingrese el Usuario" required>
+        <input type="text" id="user" placeholder="Ingrese el Usuario">
+        <div id="alertauser" class="alertauser">
+          *Campo usuario es obligatorio
+        </div>
 
         <label for="Contraseña">Contraseña</label>
-        <input type="password" placeholder="Ingrese la Contraseña" required>
+        <input type="password" id="password" placeholder="Ingrese la Contraseña">
+        <div id="alertapassword" class="alertapassword">
+          *Campo contraseña es obligatorio
+        </div>
 
-        <input type="submit" value="Ingresar">
-      </form>
+        <input type="submit" id="ingresar" value="Ingresar" onclick="login()">
+      </div>
   </div>
 
   <script src="js/init.js"></script>
