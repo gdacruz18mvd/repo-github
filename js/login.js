@@ -26,6 +26,7 @@ function login() {
         passwordalert.style.color= "yellow";
     }
     if (user.trim() !== "" && password.trim() !== "") {
+        sessionStorage.setItem("usuario", user.trim());
         window.location="cover.html";
     }
 };

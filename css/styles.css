@@ -139,3 +139,26 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+.userAndLogOut {
+  position: relative;
+  float: right;
+}
+
+#sesion {
+  color: white;
+  transition: ease-in-out color .15s;
+}
+
+#btnDesconectar {
+  color: black;
+  margin-left: 1em;
+  margin-right: -7em;
+  transition: ease-in-out color .15s;
+  border-radius: 25rem;
+  background-color: white;
+}
+
+#btnDesconectar:hover {
+  background-color: gray;
+}
