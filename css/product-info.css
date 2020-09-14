@@ -1,0 +1,69 @@
+.stars {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    }
+
+/*hace que no se vean los radio button*/
+.stars input {
+    position: absolute;
+    top: -1em;
+    }
+
+
+.stars label {
+    float: right;
+    color: #c1b8b8;
+    font-size: 30px; 
+    }
+
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input:checked ~ label {
+    color:orange;
+    }
+
+span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: blue;
+    }
+
+#nameCommentContainer {
+    margin-top: 1em;
+}
+
+#contentCommentContainer {
+    margin-top: 1em;
+}
+
+#btnSendComment {
+    float: right;
+}
+
+#commentsHeader {
+    margin-top: 3em;
+}
+
+#comments {
+    margin-top: 2em;
+}
+
+#puntuaciónYEnviar {
+    margin-top: -1em;
+}
+
+.puntuacionReal {
+    color: orange;
+}
+
+.commentContainer {
+    margin-left: 3em;
+}
+
+.well {
+    margin-top: 2m;
+    margin-bottom: 2em;
+    background-color: rgb(218, 218, 238);
+    border-radius: 25rem;
+}
