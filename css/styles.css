@@ -150,7 +150,9 @@ a.custom-card:hover {
   transition: ease-in-out color .15s;
 }
 
-#btnDesconectar {
+ 
+/*Botón Cerrar Sesión pasa al dropdown*/
+/*#btnDesconectar {
   color: black;
   margin-left: 1em;
   margin-right: -7em;
@@ -161,4 +163,15 @@ a.custom-card:hover {
 
 #btnDesconectar:hover {
   background-color: gray;
+}*/
+
+.user-ddmenu-item-content {
+  padding-left: 0.75rem;
+  display: block;
+  text-decoration-line: none !important;
+  cursor: pointer !important;
+}
+
+.user-ddmenu-item-content:hover {
+  background-color: rgb(180, 220, 220);
 }

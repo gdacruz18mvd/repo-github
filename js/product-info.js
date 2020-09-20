@@ -1,25 +1,49 @@
 var product = {};
 var comment = {};
 
-//Función para mostrar las imágenes del producto
+//Función para mostrar las imágenes del producto y los indicadores (se añaden a las clases del carousel)
 function showImagesGallery(array){
 
-    let htmlContentToAppend = "";
+    let slideHtmlContentToAppend = "";
+    let indicadoresHtmlContentToAppend = "";
 
     for(let i = 0; i < array.length; i++){
         let imageSrc = array[i];
-
-        htmlContentToAppend += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
+        
+        if (i == 0) {
+        slideHtmlContentToAppend += `
+            <div class="carousel-item active">
+                <img src="${imageSrc}" style="width:100%;" alt="${imageSrc}">
             </div>
-        </div>
-
         `
+        indicadoresHtmlContentToAppend += `
+            <li data-target="#myCarousel" data-slide-to="${i}" class="active"></li>
+        `
+        }
+        /* Habrá un máximo de 5 indicadores */
+        else if (i>0 && i<=4) {
+        slideHtmlContentToAppend += `
+            <div class="carousel-item">
+                <img src="${imageSrc}" style="width:100%;" alt="${imageSrc}">
+            </div>
+        `
+        indicadoresHtmlContentToAppend += `
+            <li data-target="#myCarousel" data-slide-to="${i}"></li>
+        `
+        }
 
-        document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
+        /* Si son más de 5 indicadores se vuelve a vaciar la variable para que no figuren (se siguen añadiendo las imágenes de todas formas) */
+        else {
+            slideHtmlContentToAppend += `
+            <div class="carousel-item">
+                <img src="` + imageSrc + `" style="width:100%;">
+            </div>
+        `
+        indicadoresHtmlContentToAppend = "";
+        }
     }
+    document.getElementById("productImagesGallery").innerHTML = slideHtmlContentToAppend;
+    document.getElementById("indicadores").innerHTML = indicadoresHtmlContentToAppend;
 }
 
 //Función para mostrar los productos relacionados
@@ -41,9 +65,8 @@ function showRelatedProducts(array){
             </div>
         </div>
         `
-
-        document.getElementById("relatedProducts").innerHTML = htmlContentToAppend;
     });
+    document.getElementById("relatedProducts").innerHTML = htmlContentToAppend;
 }
 
 //Función para mostrar los comentarios
@@ -74,9 +97,8 @@ function showComments(array){
 
         //Sumo la puntuación a la variable htmlContentToAppend de arriba
         htmlContentToAppend += `<div class = "commentPuntuacion">Puntuación: ${puntuacion}</div></div></div>`
-
-        document.getElementById("comments").innerHTML = htmlContentToAppend;
     }
+    document.getElementById("comments").innerHTML = htmlContentToAppend;
 }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de

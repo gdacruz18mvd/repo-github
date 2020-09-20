@@ -11,19 +11,15 @@ function login() {
 
     if (user.trim() !== "") {
         useralert.style.visibility="hidden";
-        useralert.style.color= "yellow";
     }
     if (user.trim() === "") {
         useralert.style.visibility="visible";
-        useralert.style.color= "yellow";
     }
     if (password.trim() !== "") {
         passwordalert.style.visibility="hidden";
-        passwordalert.style.color= "yellow";
     }
     if (password.trim() === "") {
         passwordalert.style.visibility="visible";
-        passwordalert.style.color= "yellow";
     }
     if (user.trim() !== "" && password.trim() !== "") {
         sessionStorage.setItem("usuario", user.trim());

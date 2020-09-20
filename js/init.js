@@ -45,6 +45,6 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
     var sesion = sessionStorage.getItem("usuario");
-    document.getElementById('sesion').innerHTML="Hola, " + sesion + " ";
-    //Nótese que si cerramos el navegador y volvemos a abrir, el dato sigue almacenado
+    document.getElementById('sesion').innerHTML="Hola " + sesion + " ";
+    //Nótese que si cerramos el navegador y volvemos a abrir, el dato se borra al ser Session storage
 });

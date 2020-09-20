@@ -82,4 +82,5 @@ body {
 .alertauser,
 .alertapassword {
     visibility: hidden;
+    color: yellow;
 }
